@@ -31,18 +31,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Question text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ws7-WH-tkc">
-                                        <rect key="frame" x="0.0" y="20.5" width="343" height="560"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" editable="NO" text="Question text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ws7-WH-tkc">
+                                        <rect key="frame" x="0.0" y="20.5" width="343" height="344"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OX-4m-vrr">
-                                        <rect key="frame" x="0.0" y="580.5" width="343" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="364.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-dE-tRZ">
+                                        <rect key="frame" x="0.0" y="385" width="343" height="216"/>
+                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-J4-ilJ">
                                         <rect key="frame" x="0.0" y="601" width="343" height="30"/>
                                         <state key="normal" title="Final answer!"/>
@@ -58,6 +61,11 @@
                             <constraint firstItem="zqg-1u-2HJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="mUl-ub-taI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerPickerView" destination="rQN-dE-tRZ" id="9qE-zn-lhp"/>
+                        <outlet property="questionTextView" destination="Ws7-WH-tkc" id="4Cg-V0-eDa"/>
+                        <outlet property="questionalLabel" destination="1vW-1k-olX" id="j6c-c9-iae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
