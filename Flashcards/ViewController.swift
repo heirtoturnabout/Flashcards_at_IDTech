@@ -32,6 +32,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         questionTextView.text = cardCollection.instance.currentCard.question
         
         questionalLabel.text = "Question \(cardCollection.instance.currentIndex + 1)/\(cardCollection.instance.cards.count)"
+        
+        answerPickerView.reloadAllComponents()
     }
     
     // Pickerview Data Source
@@ -71,6 +73,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             self.present(alert, animated: true)
             
         }
+        
+        cardCollection.instance.nextQuestion()
+        
+        setupCardUI()
     }
     
 }
