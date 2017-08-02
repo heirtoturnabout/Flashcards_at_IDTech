@@ -47,6 +47,6 @@ class cardCollection {
     }
     
     public func checkAnswer(_selectedAnswer : Int) -> Bool {
-        return currentCard.options [_selectedAnswer] == currentCard.correctAnswer
+        return currentCard.options[_selectedAnswer] == currentCard.correctAnswer
     }
 }
